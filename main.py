@@ -10,7 +10,6 @@ while not exitgame:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             exitgame = True
-
     pygame.display.update()
 pygame.quit()
 quit()
