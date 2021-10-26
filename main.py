@@ -3,7 +3,7 @@ import pygame
 import random
 
 gameDisplay = pygame.display.set_mode((800, 600))
-pygame.display.set_caption('Game Jam Team 4')
+pygame.display.set_caption('Pastrami Hunter')
 exitgame = False
 
 while not exitgame:
