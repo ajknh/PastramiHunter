@@ -4,7 +4,7 @@ This uses PyGame. To install it, please see https://www.pygame.org
 
 Basic Pygame code outline:
 1. While not done:
-	1. For each event (keypress, mouse click, etc.):
+	- For each event (keypress, mouse click, etc.):
 		- Use a chain of if statements to run code to handle each event.
 	- Run calculations to determine where objects move, what happens when objects collide, etc.
 	- Clear the screen
