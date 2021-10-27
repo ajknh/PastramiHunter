@@ -1,6 +1,7 @@
 # Game Jam Game
 This is the Game Jam Game GitHub repository.
 This uses PyGame. To install it, please see https://www.pygame.org
+Please see a basic outline of the Pygame structure at basicpygame/basicoutline.py
 
 ## Basic Pygame code outline:
 1. While not done:
