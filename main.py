@@ -31,7 +31,7 @@ while not exitgame:
     pygame.draw.line(gameDisplay, WHITE, [100, 100], [1100, 100], 5)
     pygame.draw.line(gameDisplay, WHITE, [100, 550], [1100, 550], 5)
     pygame.draw.line(gameDisplay, WHITE, [102, 100], [102, 550], 5)
- 
+    pygame.draw.line(gameDisplay, WHITE, [1098, 552], [1098, 102], 5)
 
     # add text to screen
     titletxt = gameFont.render("Pastrami Hunter", True, PASCOLOR)
