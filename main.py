@@ -8,7 +8,7 @@ WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 PASCOLOR = (199, 121, 121)
-#this is a test
+
 # add font
 gameFont = pygame.font.Font('PressStart2P.ttf', 25)
 
