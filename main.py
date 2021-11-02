@@ -34,7 +34,7 @@ while not exitgame:
     pygame.draw.line(gameDisplay, WHITE, [1098, 552], [1098, 102], 5)
 
     # Add John Ranta
-    rantaImg = pygame.image.load('ranta.jfif')
+    rantaImg = pygame.image.load('ranta.png')
 
     def ranta(x,y):
         gameDisplay.blit(rantaImg, (x,y))
