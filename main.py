@@ -33,6 +33,15 @@ while not exitgame:
     pygame.draw.line(gameDisplay, WHITE, [102, 100], [102, 550], 5)
     pygame.draw.line(gameDisplay, WHITE, [1098, 552], [1098, 102], 5)
 
+    
+    # Add John Ranta
+    carImg = pygame.image.load('ranta.jfif')
+
+    def car(x,y):
+        gameDisplay.blit(carImg, (x,y))
+
+    car(500, 300)
+    
     # add text to screen
     titletxt = gameFont.render("Pastrami Hunter", True, PASCOLOR)
     gameDisplay.blit(titletxt, (400, 40))
