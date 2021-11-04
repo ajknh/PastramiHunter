@@ -31,15 +31,18 @@ while not exitgame:
     pygame.draw.line(gameDisplay, WHITE, [100, 100], [1100, 100], 5)
     pygame.draw.line(gameDisplay, WHITE, [100, 550], [1100, 550], 5)
     pygame.draw.line(gameDisplay, WHITE, [102, 100], [102, 550], 5)
-    pygame.draw.line(gameDisplay, WHITE, [1098, 552], [1098, 102], 5)
+    pygame.draw.line(gameDisplay, WHITE, [1098, 100], [1098, 550], 5)
+    # add inside box
+    pygame.draw.rect(gameDisplay, WHITE, (525, 250, 150, 150), 5)
 
-    # Add John Ranta
+    # Add images
     rantaImg = pygame.image.load('ranta.png')
+    # resize ranta
+    rantaImg = pygame.transform.scale(rantaImg, (63.5, 87))
 
-    def ranta(x,y):
-        gameDisplay.blit(rantaImg, (x,y))
-
-    ranta(500, 300)
+    def loadImages():
+        gameDisplay.blit(rantaImg, (565,280))
+    loadImages()
 
     
     # add text to screen
