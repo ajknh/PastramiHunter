@@ -47,7 +47,7 @@ while not exitgame:
             gameDisplay.blit(rantaOpen, (rx,ry))
             time.sleep(1)
             gameDisplay.blit(rantaClosed, (rx,ry))
-    loadImages()
+    loadImages(565,280)
 
     
     # add text to screen
