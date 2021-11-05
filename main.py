@@ -36,12 +36,17 @@ while not exitgame:
     pygame.draw.rect(gameDisplay, WHITE, (525, 250, 150, 150), 5)
 
     # Add images
-    rantaImg = pygame.image.load('ranta.png')
+    rantaOpen = pygame.image.load('ranta_open.png')
+    rantaClosed = pygame.image.load('ranta_closed.png')
     # resize ranta
-    rantaImg = pygame.transform.scale(rantaImg, (63.5, 87))
+    rantaOpen = pygame.transform.scale(rantaOpen, (63.5, 87))
+    rantaClosed = pygame.transform.scale(rantaClosed, (63.5, 87))
 
     def loadImages():
-        gameDisplay.blit(rantaImg, (565,280))
+        while True:
+            gameDisplay.blit(rantaOpen, (rx,ry))
+            time.sleep(1)
+            gameDisplay.blit(rantaClosed, (rx,ry))
     loadImages()
 
     
