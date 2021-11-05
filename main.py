@@ -42,7 +42,7 @@ while not exitgame:
     rantaOpen = pygame.transform.scale(rantaOpen, (63.5, 87))
     rantaClosed = pygame.transform.scale(rantaClosed, (63.5, 87))
 
-    def loadImages():
+    def loadImages(rx, ry):
         while True:
             gameDisplay.blit(rantaOpen, (rx,ry))
             time.sleep(1)
