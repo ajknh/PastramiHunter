@@ -43,38 +43,40 @@ while not exitgame:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             exitgame = True
-        # if player presses key
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT or event.key == pygame.K_a:
-                meatX -= 10
-                screen.blit(meatImg, (meatX, meatY))
-            elif event.key == pygame.K_UP or event.key == pygame.K_w:
-                meatY -= 10
-                screen.blit(meatImg, (meatX, meatY))
-            elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
-                meatY += 10
-                screen.blit(meatImg, (meatX, meatY))
-            elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
-                meatX += 10
-                screen.blit(meatImg, (meatX, meatY))
+        # if player presses key 
+        #elif event.type == pygame.KEYDOWN:
+            #if event.key == pygame.K_LEFT or event.key == pygame.K_a:
+                #meatX -= 10
+                #screen.blit(meatImg, (meatX, meatY))
+            #elif event.key == pygame.K_UP or event.key == pygame.K_w:
+                #meatY -= 10
+                #screen.blit(meatImg, (meatX, meatY))
+            #elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                #meatY += 10
+                #screen.blit(meatImg, (meatX, meatY))
+            #elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
+                #meatX += 10
+                #screen.blit(meatImg, (meatX, meatY))
+        # above causes buggy movement when first pressing a key to hold
+        # also pretty redundant
     # if player holds down key
     pkeys = pygame.key.get_pressed()
-    if pkeys[pygame.K_LEFT]:
-        meatX -= 5
+    if pkeys[pygame.K_LEFT] or pkeys[pygame.K_a]:
+        meatX -= 1
         screen.blit(meatImg, (meatX, meatY))
-        time.sleep(0.1)
-    elif pkeys[pygame.K_UP]:
-        meatY -= 5
+        time.sleep(0.02)
+    elif pkeys[pygame.K_UP] or pkeys[pygame.K_w]:
+        meatY -= 1
         screen.blit(meatImg, (meatX, meatY))
-        time.sleep(0.1)
-    elif pkeys[pygame.K_DOWN]:
-        meatY += 5
+        time.sleep(0.02)
+    elif pkeys[pygame.K_DOWN] or pkeys[pygame.K_s]:
+        meatY += 1
         screen.blit(meatImg, (meatX, meatY))
-        time.sleep(0.1)
-    elif pkeys[pygame.K_RIGHT]:
-        meatX += 5
+        time.sleep(0.02)
+    elif pkeys[pygame.K_RIGHT] or pkeys[pygame.K_d]:
+        meatX += 1
         screen.blit(meatImg, (meatX, meatY))
-        time.sleep(0.1)
+        time.sleep(0.02)
             
     # --- Game logic should go here
 
