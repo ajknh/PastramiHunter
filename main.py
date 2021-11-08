@@ -19,10 +19,12 @@ pygame.display.set_caption('Pastrami Hunter')
 exitgame = False
 
 # pastrami image is main player for now, we will change later
-meatImg = pygame.image.load('pastrami.png')
-meatImg = pygame.transform.scale(meatImg, (140, 90))
-meatX = 110
-meatY = 110
+playerImgX = 140
+playerImgY = 90
+playerImg = pygame.image.load('pastrami.png')
+playerImg = pygame.transform.scale(playerImg, (playerImgX, playerImgY))
+playerX = 110
+playerY = 110
 
 # Add images
 rantaOpen = pygame.image.load('ranta_open.png')
@@ -32,7 +34,7 @@ rantaOpen = pygame.transform.scale(rantaOpen, (64, 87))
 rantaClosed = pygame.transform.scale(rantaClosed, (64, 87))
 
 def loadImages(rx, ry):
-    screen.blit(meatImg, (meatX, meatY))
+    screen.blit(playerImg, (playerX, playerY))
     #while True:
         #screen.blit(rantaOpen, (rx,ry))
         #time.sleep(1)
@@ -62,24 +64,42 @@ while not exitgame:
     # if player holds down key
     pkeys = pygame.key.get_pressed()
     if pkeys[pygame.K_LEFT] or pkeys[pygame.K_a]:
-        meatX -= 1
-        screen.blit(meatImg, (meatX, meatY))
+        playerX -= 1
+        if touching_wall() == False:
+            playerX = 100
+        screen.blit(playerImg, (playerX, playerY))
         time.sleep(0.02)
     elif pkeys[pygame.K_UP] or pkeys[pygame.K_w]:
-        meatY -= 1
-        screen.blit(meatImg, (meatX, meatY))
+        playerY -= 1
+        if touching_wall() == False:
+            playerY = 100
+        screen.blit(playerImg, (playerX, playerY))
         time.sleep(0.02)
     elif pkeys[pygame.K_DOWN] or pkeys[pygame.K_s]:
-        meatY += 1
-        screen.blit(meatImg, (meatX, meatY))
+        playerY += 1
+        if touching_wall() == False:
+            playerY = 550 - playerImgY
+        screen.blit(playerImg, (playerX, playerY))
         time.sleep(0.02)
     elif pkeys[pygame.K_RIGHT] or pkeys[pygame.K_d]:
-        meatX += 1
-        screen.blit(meatImg, (meatX, meatY))
+        playerX += 1
+        if touching_wall() == False:
+            playerX = 1100 - playerImgX
+        screen.blit(playerImg, (playerX, playerY))
         time.sleep(0.02)
-            
+    
     # --- Game logic should go here
-
+    def touching_wall():
+        if playerX < 100:
+            return False
+        elif playerY < 100:
+            return False
+        elif playerY + playerImgY > 550:
+            return False
+        elif playerX + playerImgX > 1100:
+            return False
+        # numbers are wall coordinates, playerImg variables for potentially
+        # varying player image sizes in the future
     # --- Screen-clearing code goes here
     
     screen.fill(BLACK)
