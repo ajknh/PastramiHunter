@@ -69,19 +69,19 @@ while not exitgame:
             playerX = 100
         screen.blit(playerImg, (playerX, playerY))
         time.sleep(0.01)
-    elif pkeys[pygame.K_UP] or pkeys[pygame.K_w]:
+    if pkeys[pygame.K_UP] or pkeys[pygame.K_w]:
         playerY -= 1
         if touching_wall():
             playerY = 100
         screen.blit(playerImg, (playerX, playerY))
         time.sleep(0.01)
-    elif pkeys[pygame.K_DOWN] or pkeys[pygame.K_s]:
+    if pkeys[pygame.K_DOWN] or pkeys[pygame.K_s]:
         playerY += 1
         if touching_wall():
             playerY = 550 - playerImgY
         screen.blit(playerImg, (playerX, playerY))
         time.sleep(0.01)
-    elif pkeys[pygame.K_RIGHT] or pkeys[pygame.K_d]:
+    if pkeys[pygame.K_RIGHT] or pkeys[pygame.K_d]:
         playerX += 1
         if touching_wall():
             playerX = 1100 - playerImgX
