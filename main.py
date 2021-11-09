@@ -19,9 +19,9 @@ pygame.display.set_caption('Pastrami Hunter')
 exitgame = False
 
 # pastrami image is main player for now, we will change later
-playerImgX = 140
-playerImgY = 90
-playerImg = pygame.image.load('pastrami.png')
+playerImgX = 180
+playerImgY = 225
+playerImg = pygame.image.load('Cyan.png')
 playerImg = pygame.transform.scale(playerImg, (playerImgX, playerImgY))
 playerX = 110
 playerY = 110
@@ -63,30 +63,31 @@ while not exitgame:
         # also pretty redundant
     # if player holds down key
     pkeys = pygame.key.get_pressed()
+    speed = 0.2
     if pkeys[pygame.K_LEFT] or pkeys[pygame.K_a]:
-        playerX -= 1
+        playerX -= speed
         if touching_wall():
             playerX = 100
         screen.blit(playerImg, (playerX, playerY))
-        time.sleep(0.01)
+        time.sleep(0.0)
     if pkeys[pygame.K_UP] or pkeys[pygame.K_w]:
-        playerY -= 1
+        playerY -= speed
         if touching_wall():
             playerY = 100
         screen.blit(playerImg, (playerX, playerY))
-        time.sleep(0.01)
+        time.sleep(0.0)
     if pkeys[pygame.K_DOWN] or pkeys[pygame.K_s]:
-        playerY += 1
+        playerY += speed
         if touching_wall():
             playerY = 550 - playerImgY
         screen.blit(playerImg, (playerX, playerY))
-        time.sleep(0.01)
+        time.sleep(0.0)
     if pkeys[pygame.K_RIGHT] or pkeys[pygame.K_d]:
-        playerX += 1
+        playerX += speed
         if touching_wall():
             playerX = 1100 - playerImgX
         screen.blit(playerImg, (playerX, playerY))
-        time.sleep(0.01)
+        time.sleep(0.00)
     
     # --- Game logic should go here
     def touching_wall():
