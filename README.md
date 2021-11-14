@@ -1,3 +1,6 @@
+# What's New!
+`(Karl Leonardi) ==>` I have deleted the old photos, and created a new folder with all the photos in it. This will make the /main branch a little less cluttered.
+
 # Pastrami Hunter
 This is the Game Jam Game GitHub repository.
 This uses PyGame. To install it, please see https://www.pygame.org  
