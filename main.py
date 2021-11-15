@@ -1,5 +1,5 @@
 ## main py game file
-import pygame
+impot pygame
 import random
 import time
 pygame.init()
