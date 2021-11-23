@@ -21,17 +21,17 @@ exitgame = False
 # pastrami image is main player for now, we will change later
 playerImgX = 90
 playerImgY = 112
-playerImg = pygame.image.load('Cyan.png')
-playerImg = pygame.transform.scale(playerImg, (playerImgX, playerImgY))
 playerX = 110
 playerY = 110
 
 # Add images
 rantaOpen = pygame.image.load('ranta_open.png')
 rantaClosed = pygame.image.load('ranta_closed.png')
-# resize ranta
+playerImg = pygame.image.load('Cyan.png')
+# resize images
 rantaOpen = pygame.transform.scale(rantaOpen, (64, 87))
 rantaClosed = pygame.transform.scale(rantaClosed, (64, 87))
+playerImg = pygame.transform.scale(playerImg, (playerImgX, playerImgY))
 
 def loadImages(rx, ry):
     screen.blit(playerImg, (playerX, playerY))
