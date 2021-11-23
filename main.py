@@ -45,25 +45,9 @@ while not exitgame:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             exitgame = True
-        # if player presses key 
-        #elif event.type == pygame.KEYDOWN:
-            #if event.key == pygame.K_LEFT or event.key == pygame.K_a:
-                #meatX -= 10
-                #screen.blit(meatImg, (meatX, meatY))
-            #elif event.key == pygame.K_UP or event.key == pygame.K_w:
-                #meatY -= 10
-                #screen.blit(meatImg, (meatX, meatY))
-            #elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
-                #meatY += 10
-                #screen.blit(meatImg, (meatX, meatY))
-            #elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
-                #meatX += 10
-                #screen.blit(meatImg, (meatX, meatY))
-        # above causes buggy movement when first pressing a key to hold
-        # also pretty redundant
     # if player holds down key
     pkeys = pygame.key.get_pressed()
-    speed = 0.2
+    speed = 0.15
     if pkeys[pygame.K_LEFT] or pkeys[pygame.K_a]:
         playerX -= speed
         if touching_wall():
