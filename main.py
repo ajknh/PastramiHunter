@@ -19,8 +19,8 @@ pygame.display.set_caption('Pastrami Hunter')
 exitgame = False
 
 # pastrami image is main player for now, we will change later
-playerImgX = 180
-playerImgY = 225
+playerImgX = 90
+playerImgY = 112
 playerImg = pygame.image.load('Cyan.png')
 playerImg = pygame.transform.scale(playerImg, (playerImgX, playerImgY))
 playerX = 110
