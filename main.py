@@ -27,7 +27,7 @@ playerY = 110
 # Add images
 rantaOpen = pygame.image.load('ranta_open.png')
 rantaClosed = pygame.image.load('ranta_closed.png')
-playerImg = pygame.image.load('Cyan.png')
+playerImg = pygame.image.load('pastrami.png')
 # resize images
 rantaOpen = pygame.transform.scale(rantaOpen, (64, 87))
 rantaClosed = pygame.transform.scale(rantaClosed, (64, 87))
