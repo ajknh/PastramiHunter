@@ -14,7 +14,7 @@ PASCOLOR = (199, 121, 121)
 gameFont = pygame.font.Font('PressStart2P.ttf', 25)
 
 screen = pygame.display.set_mode((1200, 650))
-pygame.display.set_caption('https://www.blocksmithxr.com/blog/bot_is_sus')
+pygame.display.set_caption('Bot is sus?!')
 
 exitgame = False
 
