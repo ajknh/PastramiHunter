@@ -11,3 +11,6 @@ Please see a basic outline of the Pygame structure at basicpygame/basicoutline.p
 	- Run calculations to determine where objects move, what happens when objects collide, etc.
 	- Clear the screen
 	- Draw everything
+
+## Important Links:
+-https://www.blocksmithxr.com/blog/bot_is_sus
