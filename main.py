@@ -47,7 +47,7 @@ while not exitgame:
             exitgame = True
     # if player holds down key
     pkeys = pygame.key.get_pressed()
-    speed = 0.15
+    speed = 0.20
     if pkeys[pygame.K_LEFT] or pkeys[pygame.K_a]:
         playerX -= speed
         if touching_wall():
